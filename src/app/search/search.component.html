@@ -1,0 +1,52 @@
+   <div class="search-container">
+    <div class="search-box" >
+        <div>
+            <div class= "top-section">
+                <select class="destination" placeholder="Choose City">
+                    <option value="">Where to?</option>
+                    <label for="regionSelect" [(ngModel)]="selectedRegion">Select Region:</label>
+                    <option *ngFor="let region of regions" [value]="region.id">{{ region.name }}</option>  
+                </select>
+            </div>
+            <div class = "bottom-section" style="padding-top: 10px; text-align: center;">
+                <label class = "labels" style="font-family:Georgia, 'Times New Roman', Times, serif ; font-weight: 300;">REGION</label>
+            </div>
+
+        </div>
+        
+        <div  class="date-picker" style="padding-left: 20px; text-align: center;">
+            <div>
+                <input type="date" class="check-in">
+            </div>
+ 
+            <div style="padding-top: 10px;">
+                <label class = "labels"  style="font-family:Georgia, 'Times New Roman', Times, serif ; font-weight: 300;" for="">WHEN?</label>
+            </div>
+          
+        </div>
+        <div class="travelers">
+            <div class="travelers_top-container">
+              <div class="number">  
+                <button class="traveler-minus" (click)="decrementTravelerCount()">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+                <input type="number" class="traveler-count" min="1" [(ngModel)]= "travelerCount" readonly="readonly">
+                <button class="traveler-plus" (click)="incrementTravelerCount()">
+                  <i class="fa-solid fa-plus"></i>                    
+                </button>
+              </div>
+              <div style="padding-top: 10px; text-align: center;">
+                <label class="labels" style="font-family:Georgia, 'Times New Roman', Times, serif; font-weight: 300;" for="">TRAVELLERS</label>
+              </div>
+            </div>
+          </div>
+          
+      </div>
+      <button class="find-tours-btn" (click)="search()">
+        <i class="fa-solid fa-suitcase-rolling fa-2xl" style="color: #FFD43B;"></i>
+        <br>
+        <span><b>FIND TOURS</b></span>
+      </button>
+    </div>
+
+  
