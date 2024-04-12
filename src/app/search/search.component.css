@@ -1,0 +1,85 @@
+.search-container {
+    background-color: #cca69a; 
+    display: flex;
+    justify-content: center; 
+    padding-top: 70px;
+    padding-bottom: 70px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+
+  }
+  
+  .search-box {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff; 
+    padding: 30px 30px;
+    border-radius: 8px; 
+  }
+  .traveler-count{
+    text-align: center;
+    padding: 8px 8px; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    font-size: 16px; 
+    cursor: pointer; 
+  }
+  
+  .destination {
+    text-align: center;
+    padding: 8px 20px; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    
+  }
+  
+  .check-in{
+    padding: 10px 10px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .find-tours-btn {
+    margin-left: 8px;
+    margin-top: 17px;
+    width:120px;
+    height: 100px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: #cca69a;
+    background-color: #11353a;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .destination:focus,
+  .traveler-count:focus {
+    outline: none;
+  }
+  
+  
+  .region,
+  .date-picker {
+    margin-right: 20px; 
+  }
+  
+  .region select,
+  .traveler-count {
+    width: 70px; 
+  }
+  
+  .traveler-minus,
+  .traveler-plus {
+    margin: 8px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
