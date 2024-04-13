@@ -21,6 +21,11 @@ import { CountryCarouselComponent } from './country-carousel/country-carousel.co
 import { FormsModule } from '@angular/forms';
 import { OfferingsComponent } from './offerings/offerings.component';
 import { CardComponent } from './offerings/card/card.component';
+import { RegionsComponent } from './regions/regions.component';
+import { AsiaComponent } from './regions/asia/asia.component';
+import { AmericasComponent } from './regions/americas/americas.component';
+import { EuropeComponent } from './regions/europe/europe.component';
+import { MiddleEastComponent } from './regions/middle-east/middle-east.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +41,12 @@ import { CardComponent } from './offerings/card/card.component';
     SearchComponent,
     CountryCarouselComponent,
     OfferingsComponent,
-    CardComponent
+    CardComponent,
+    RegionsComponent,
+    AsiaComponent,
+    AmericasComponent,
+    EuropeComponent,
+    MiddleEastComponent
     
   ],
   imports: [

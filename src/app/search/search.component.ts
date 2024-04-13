@@ -11,21 +11,27 @@ import { Region } from '../model/region';
 })
 
 export class SearchComponent implements OnInit {
-
-  ngOnInit(): void {
-  }
-
+  currentDate: string;
+  selectedRegion: string;
   regions: Region[] = [
-    { id: 1, name: 'Asia' },
-    { id: 2, name: 'Americas' },
-    { id: 3, name: 'Middle East' },
-    { id: 4, name: 'Europe' }
+    { id: 'asia', name: 'Asia' },
+    { id: 'amer', name: 'Americas' },
+    { id: 'middle-east', name: 'Middle East' },
+    { id: 'europe', name: 'Europe' }
   ];
-  selectedRegion: number = 1;
-  
+  travelerCount: number = 1;
   constructor(private router: Router) { }
 
-  travelerCount: number = 1;
+
+  ngOnInit(): void {
+    this.currentDate = this.getCurrentDate();
+
+  }
+  getCurrentDate() {
+    const today = new Date();
+    return today.toISOString().split('T')[0];
+  }
+
   decrementTravelerCount() {
     if (this.travelerCount > 1) {
       this.travelerCount--;
@@ -38,12 +44,21 @@ export class SearchComponent implements OnInit {
     this.travelerCount++;
   }
   search() {
-    this.router.navigate(['/destinations', this.selectedRegion]);
+    switch (this.selectedRegion) {
+      case 'asia':
+        this.router.navigate(['/destinations/asia']);
+        break;
+      case 'amer':
+        this.router.navigate(['/destinations/amer']);
+        break;
+      case 'europe':
+        this.router.navigate(['/destinations/europe']);
+        break;
+      case 'middle-east':
+        this.router.navigate(['/destinations/middle-east']);
+        break;
+      default:
+        break;
+    }
   }
-
-  // search() {
-  //   if (this.selectedRegion) {
-  //     this.router.navigate([`/destinations/${this.selectedRegion}`]);
-  //   }
-  // }
 }

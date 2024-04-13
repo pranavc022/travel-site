@@ -6,20 +6,25 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PackagesComponent } from './destination/packages/packages.component';
+import { AsiaComponent } from './regions/asia/asia.component';
+import { AmericasComponent } from './regions/americas/americas.component';
+import { EuropeComponent } from './regions/europe/europe.component';
+import { MiddleEastComponent } from './regions/middle-east/middle-east.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'destinations', component: DestinationComponent},
   { path: 'destinations/:regionId', component: DestinationComponent },
-  
+
+  { path: 'destinations/asia', component: AsiaComponent },
+  { path: 'destinations/amer', component: AmericasComponent },
+  { path: 'destinations/europe', component: EuropeComponent },
+  { path: 'destinations/middle-east', component: MiddleEastComponent },
+
   {path: 'destinations/:regionId/packages', component: PackagesComponent},
   {path: 'about-us', component: AboutUsComponent },
   {path: 'contact', component: ContactComponent},
-  // { path: '1', children: [{ path: 'destinations', component: DestinationComponent }] },
-  // { path: '2', children: [{ path: 'destinations', component: DestinationComponent }] },
-  // { path: '3', children: [{ path: 'destinations', component: DestinationComponent }] },
-  // { path: '4', children: [{ path: 'destinations', component: DestinationComponent }] },
-  // {path: '', redirectTo: '', },
+
   {path: '**', component: NotFoundComponent}
 ];
 
