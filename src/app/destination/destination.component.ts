@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TourPackagesService } from '../services/tour-packages.service';
 
+
 @Component({
   selector: 'app-destination',
   templateUrl: './destination.component.html',

@@ -2,8 +2,8 @@
     <div class="search-box" >
         <div>
             <div class= "top-section">
-                <select class="destination" placeholder="Choose City">
-                    <option value="">Where to?</option>
+                <select class="destination" placeholder="Where to?" [(ngModel)]="selectedRegion">
+                    <!-- <option value="">Where to?</option> -->
                     <label for="regionSelect" [(ngModel)]="selectedRegion">Select Region:</label>
                     <option *ngFor="let region of regions" [value]="region.id">{{ region.name }}</option>  
                 </select>
@@ -16,7 +16,7 @@
         
         <div  class="date-picker" style="padding-left: 20px; text-align: center;">
             <div>
-                <input type="date" class="check-in">
+                <input type="date" class="check-in" [min]="currentDate" >
             </div>
  
             <div style="padding-top: 10px;">
