@@ -37,10 +37,13 @@ export class SearchComponent implements OnInit {
   incrementTravelerCount() {
     this.travelerCount++;
   }
-
   search() {
-    if (this.selectedRegion) {
-      this.router.navigate([`/${this.selectedRegion}`]);
-    }
+    this.router.navigate(['/destinations', this.selectedRegion]);
   }
+
+  // search() {
+  //   if (this.selectedRegion) {
+  //     this.router.navigate([`/destinations/${this.selectedRegion}`]);
+  //   }
+  // }
 }
