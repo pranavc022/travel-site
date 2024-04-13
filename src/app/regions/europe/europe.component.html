@@ -1,1 +1,39 @@
-<p>europe works!</p>
+<app-navbar> </app-navbar>
+<h1>Europe</h1>
+
+<div class="filters">
+  <div class="adventure-type-filter">
+    <label for="adventure-type">Filter by Adventure Type:</label>
+    <select id="adventure-type" [(ngModel)]="selectedAdventureType" (change)="onAdventureTypeSelect()">
+      <option value="">All</option>
+      <option *ngFor="let type of adventureTypes" [value]="type">{{ type }}</option>
+    </select>
+  </div>
+
+  <div class="cost-per-person-filter">
+    <label for="cost-per-person">Filter by Cost per Person:</label>
+    <input
+      type="range"
+      id="cost-per-person"
+      min="1500"
+      max="3000"
+      step="100"
+      [(ngModel)]="costPerPersonRange[0]"
+      [(ngModel)]="costPerPersonRange[1]"
+      (input)="onCostRangeChange()"
+    />
+    <span>{{ costPerPersonRange[0] }} - {{ costPerPersonRange[1] }}</span>
+  </div>
+  <button class="clear-filters-btn" (click)="clearFilters()">Clear All Filters</button>
+
+</div>
+
+<div class="tour-packages">
+  <div class="tour-package" *ngFor="let tour of tourPackages">
+    <h3>{{ tour.packageName }}</h3>
+    <p>Country: {{ tour.countryName }}</p>
+    <p>Cost per Person: {{ tour.costPerPerson }}</p>
+    <p>Adventure Type: {{ tour.adventureType }}</p>
+    <p>{{ tour.description }}</p>
+  </div>
+</div>
