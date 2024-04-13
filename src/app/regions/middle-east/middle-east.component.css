@@ -1,0 +1,36 @@
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.adventure-type-filter,
+.cost-per-person-filter {
+  display: flex;
+  align-items: center;
+}
+
+.adventure-type-filter label,
+.cost-per-person-filter label {
+  margin-right: 10px;
+}
+
+.tour-packages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.tour-package {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+}
+.clear-filters-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
