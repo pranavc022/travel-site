@@ -1,101 +1,119 @@
+/* CSS for the container */
 .container {
-    display: flex;
-    height: 70vh; 
-  }
-  
-  .carousel-container {
-    width: 35%;
-    position: relative;
-  }
-  
-  .carousel {
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .carousel img {
-    display: none;
-    width: 100%; 
-    height: auto; 
-    object-fit: cover; 
-  }
-  
-  .carousel img.active {
-    display: block;
-  }
-  
-  .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    width: 30px; 
-    height: 30px;
-    background-color: #fcb900; 
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .carousel-btn.left {
-    left: 10px;
-  }
-  
-  .carousel-btn.right {
-    right: 10px;
-  }
-  
-  .locations-container {
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    background-color: #ff6900; 
-  }
-  
-  .locations-header {
-    color: rgb(0, 0, 0);
-    padding: 10px 0;
-    text-align: center;
-    font-size: 28px;
-    background-color: #ff6900; 
-    font-weight: 900;
-  }
-  
-  .regions-container {
-    flex-grow: 1; 
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .region-group {
-    display: flex;
-    width: 100%;
-  }
-  
-  .orange-bg {
-    background-color: #ff6900;
-  }
-  
-  .purple-bg {
-    background-color: #9b51e0;
-    color: rgb(0, 0, 0);
-  }
-  
-  .region {
-    flex: 1; 
-    padding: 10px;
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 14px;
-  }
-  
-  .country-icon {
-    display: block;
-    width: 20px; 
-    height: 20px; 
-    margin: 0 auto 10px; 
-  }
-  
+  display: flex;
+  width: 100vw; /* Use the full viewport width */
+  max-width: 100%; /* Make sure we don't get a horizontal scroll */
+  height: 70vh; /* Adjust height as needed */
+  margin: 0; /* Remove margins that could cause whitespace */
+  overflow: hidden; /* Hide overflow */
+}
 
-  
+.carousel-container, .locations-container {
+  height: 100%; /* Make sure they take the full height */
+  margin: 0; /* Remove any margins */
+  padding: 0; /* Remove any padding */
+}
+
+/* CSS for the carousel container */
+.carousel-container {
+  flex-grow: 1; /* Allow carousel to grow and fill the space */
+  position: relative;
+  display: flex;
+  flex: 0 0 45%;
+  justify-content: center; /* Center the images in the carousel */
+  align-items: center; /* Center the images vertically */
+  padding: 0; /* Remove any default padding */
+}
+
+.carousel {
+  width: 100%;
+}
+
+.carousel img {
+  max-width: 100%; /* Ensure images don't overflow */
+  max-height: 100%; /* Ensure images don't exceed container height */
+  display: none;
+  object-fit: cover; /* Cover the area without distorting aspect ratio */
+}
+
+.carousel img.active {
+  display: block; /* Show only the active image */
+}
+
+/* CSS for the buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2; /* Ensure the buttons are above the images */
+}
+
+.carousel-btn.left {
+  left: 0;
+}
+
+.carousel-btn.right {
+  right: 0;
+}
+
+/* CSS for the locations */
+.locations-container {
+  flex-grow: 1; /* Allow locations to grow and fill the space */
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 55%;
+  align-items: stretch; /* Stretch child elements to fill the width */
+  background-color: #ff6900; /* Adjust color as needed */
+  padding: 0; /* Remove any default padding */
+}
+
+.locations-header {
+  /* Styles for locations header */
+}
+
+/* Ensure that the regions are evenly spaced and aligned */
+.regions-container {
+  display: flex;
+  justify-content: space-between; /* Space out the regions */
+  align-items: flex-start; /* Align items at the start */
+  flex-wrap: wrap; /* Wrap onto the next line if needed */
+}
+
+.region {
+  width: calc(50% - 10px); /* Calculate width with some spacing */
+  padding: 10px; /* Add padding inside the regions */
+}
+
+/* Icons hover effect */
+.region a img {
+  transition: transform 0.3s ease;
+}
+
+.region a:hover img {
+  transform: scale(1.1);
+}
+
+/* Apply flex to handle text and icons alignment */
+.region h3, .region p {
+  margin: 0;
+  padding: 5px 0; /* Add some vertical padding for spacing */
+  display: block;
+}
+
+/* Add a class for icons for additional styling and animation */
+.icon {
+  height: 50px; /* Adjust the icon size */
+  margin: 0 auto; /* Center the icon */
+  transition: transform 0.5s; /* Smooth transition for hover effect */
+}
+
+.icon:hover {
+  transform: rotate(360deg); /* Rotate icon on hover */
+}
+
+/* Adjust the region's group background */
+.orange-bg, .purple-bg {
+  width: 100%; /* Ensure full width */
+  display: flex; /* Use flexbox for inner layout */
+  flex-wrap: wrap; /* Wrap content if it doesn't fit on one line */
+}
