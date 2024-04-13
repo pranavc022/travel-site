@@ -46,16 +46,16 @@ export class SearchComponent implements OnInit {
   search() {
     switch (this.selectedRegion) {
       case 'asia':
-        this.router.navigate(['/destinations/asia']);
+        this.router.navigate(['/destination/asia']);
         break;
       case 'amer':
-        this.router.navigate(['/destinations/amer']);
+        this.router.navigate(['/destination/americas']);
         break;
       case 'europe':
-        this.router.navigate(['/destinations/europe']);
+        this.router.navigate(['/destination/europe']);
         break;
       case 'middle-east':
-        this.router.navigate(['/destinations/middle-east']);
+        this.router.navigate(['/destination/middle-east']);
         break;
       default:
         break;

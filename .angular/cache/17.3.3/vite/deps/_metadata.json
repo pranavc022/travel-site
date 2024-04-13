@@ -1,0 +1,79 @@
+{
+  "hash": "a9de930b",
+  "configHash": "d910428b",
+  "lockfileHash": "3658a5dc",
+  "browserHash": "b4e7f0ab",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "1e4ca24a",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "6320a5ea",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "862b4442",
+      "needsInterop": false
+    },
+    "@angular/material/datepicker": {
+      "src": "../../../../../node_modules/@angular/material/fesm2022/datepicker.mjs",
+      "file": "@angular_material_datepicker.js",
+      "fileHash": "d2c40a76",
+      "needsInterop": false
+    },
+    "@angular/material/input": {
+      "src": "../../../../../node_modules/@angular/material/fesm2022/input.mjs",
+      "file": "@angular_material_input.js",
+      "fileHash": "8a8e8b4d",
+      "needsInterop": false
+    },
+    "@angular/material/select": {
+      "src": "../../../../../node_modules/@angular/material/fesm2022/select.mjs",
+      "file": "@angular_material_select.js",
+      "fileHash": "2dfba6fe",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "2d8f47b6",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "b8abafb5",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-AJ2IZMMI": {
+      "file": "chunk-AJ2IZMMI.js"
+    },
+    "chunk-RZHNVPHN": {
+      "file": "chunk-RZHNVPHN.js"
+    },
+    "chunk-YCSOSES5": {
+      "file": "chunk-YCSOSES5.js"
+    },
+    "chunk-2RZHZQ5K": {
+      "file": "chunk-2RZHZQ5K.js"
+    },
+    "chunk-CVUZ7FDJ": {
+      "file": "chunk-CVUZ7FDJ.js"
+    },
+    "chunk-HO2MJLVP": {
+      "file": "chunk-HO2MJLVP.js"
+    },
+    "chunk-PQM2Y2FH": {
+      "file": "chunk-PQM2Y2FH.js"
+    }
+  }
+}

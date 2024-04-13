@@ -10,18 +10,30 @@ import { AsiaComponent } from './regions/asia/asia.component';
 import { AmericasComponent } from './regions/americas/americas.component';
 import { EuropeComponent } from './regions/europe/europe.component';
 import { MiddleEastComponent } from './regions/middle-east/middle-east.component';
+import { RegionsComponent } from './regions/regions.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'destinations', component: DestinationComponent},
   { path: 'destinations/:regionId', component: DestinationComponent },
 
-  { path: 'destinations/asia', component: AsiaComponent },
-  { path: 'destinations/amer', component: AmericasComponent },
-  { path: 'destinations/europe', component: EuropeComponent },
-  { path: 'destinations/middle-east', component: MiddleEastComponent },
-
-  {path: 'destinations/:regionId/packages', component: PackagesComponent},
+  { path: 'destination/asia', component: AsiaComponent },
+  { path: 'destination/americas', component: AmericasComponent },
+  { path: 'destination/europe', component: EuropeComponent },
+  { path: 'destination/middle-east', component: MiddleEastComponent },
+  
+  // {path: 'destinations/:regionId/packages', component: PackagesComponent},
+  // {
+  //   path: 'destination',
+  //   component: RegionsComponent, // Parent component for destinations
+  //   children: [
+  //     { path: 'asia', component: AsiaComponent }, // Child route for Asia
+  //     { path: 'europe', component: EuropeComponent }, // Child route for Europe
+  //     { path: 'middle-east', component: MiddleEastComponent }, // Child route for Mid-East
+  //     { path: 'americas', component: AmericasComponent } // Child route for America
+  //   ]
+  // },
+  
   {path: 'about-us', component: AboutUsComponent },
   {path: 'contact', component: ContactComponent},
 

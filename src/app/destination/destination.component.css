@@ -8,6 +8,7 @@ body {
     width: 100vw;
     flex: content;
 
+
   }
   .region-cards{
     padding-left: 50px;
@@ -156,7 +157,7 @@ body {
   }
   
   .para {
-    bottom: 0;
+    
     font-size: 16px;
     font-family: "Raleway";
     padding: 20px;
