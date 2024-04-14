@@ -1,1 +1,10 @@
-<p>package-detail works!</p>
+<div *ngIf="package" class="package-details">
+  <h2>{{ package.packageName }}</h2>
+  <img [src]="package.imageUrl" alt="{{ package.packageName }}">
+  <div class="details-text">
+    <p>{{ package.description }}</p>
+    <p>Country: {{ package.countryName }}</p>
+    <p>Cost per Person: {{ package.costPerPerson }}</p>
+  </div>
+  <button class="confirm-button" (click)="confirmBooking()">Confirm Booking</button>
+</div>
