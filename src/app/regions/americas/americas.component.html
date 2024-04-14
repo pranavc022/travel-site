@@ -1,4 +1,7 @@
 <app-navbar> </app-navbar>
+
+<div class="header-gradient">
+
 <div class="container">
   <h1 style="padding-top:15px; text-align: center;">Americas</h1>
 
@@ -39,9 +42,12 @@
       <button class="clear-filters-btn" (click)="clearFilters()">Clear All Filters</button>
     </div>
   </div>
-  
+  </div>
+
   <div class="tour-packages">
     <div class="tour-package" *ngFor="let tour of tourPackages">
+      <a [routerLink]="['/packages', tour.regionId]"></a>
+      <img [src]="tour.imageUrl" alt="{{ tour.packageName }}" />
       <h3>{{ tour.packageName }}</h3>
       <p>Country: {{ tour.countryName }}</p>
       <p>Cost per Person: {{ tour.costPerPerson }}</p>

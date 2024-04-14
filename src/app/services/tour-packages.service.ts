@@ -35,7 +35,7 @@ export class TourPackagesService {
       "costPerPerson": 1800,
       "adventureType": "Historical",
       "description": "Explore the enigmatic pyramids and temples of ancient Egypt, a land steeped in history and mystery.",
-      "imageUrl": "https://wallpapercave.com/wp/wp150780.jpg",
+      "imageUrl": "https://wallpaperaccess.com/full/1128770.jpg",
     },
     {
       "regionId": "4",
@@ -55,7 +55,7 @@ export class TourPackagesService {
       "costPerPerson": 1800,
       "adventureType": "Desert Safari",
       "description": "Discover the awe-inspiring beauty of the Grand Canyon on an unforgettable expedition through one of the world's most iconic natural wonders.",
-      "imageUrl": "https://wallpapercave.com/wp/wp150780.jpg",
+      "imageUrl": "https://www.wallpaperflare.com/static/365/176/931/colorado-river-explored-grand-canyon-photo-wallpaper.jpg",
     },
     {
       "regionId": "3",
@@ -65,7 +65,7 @@ export class TourPackagesService {
       "costPerPerson": 1200,
       "adventureType": "Desert Safari",
       "description": "Embark on a thrilling desert safari in Dubai, where you'll experience the excitement of dune bashing, camel riding, and traditional entertainment.",
-      "imageUrl": "https://wallpapercave.com/wp/wp150780.jpg",
+      "imageUrl": "https://th.bing.com/th/id/R.b47c7e356153c9eac9a81792e070a272?rik=VMCPvF9arYuPUA&riu=http%3a%2f%2fabasafari.com%2fwp-content%2fuploads%2f2019%2f08%2fWhatsApp-Image-2019-08-27-at-6.55.20-PM.jpeg&ehk=R9CZ%2b2BJKljEH8Y37UPtXQDMImO2LsnZdI%2b1kts7Fsg%3d&risl=&pid=ImgRaw&r=0",
     },
     {
       "regionId": "4",
@@ -125,7 +125,7 @@ export class TourPackagesService {
       "costPerPerson": 2300,
       "adventureType": "Wonders",
       "description": "Discover the breathtaking beauty of Santorini, with its iconic whitewashed buildings, stunning sunsets, and crystal-clear waters, on this unforgettable island getaway.",
-      "imageUrl": "https://wallpapercave.com/wp/wp150780.jpg",
+      "imageUrl": "https://cdn.projectexpedition.com/photos/641f5f63960f1_sized.jpg",
     },
     {
       "regionId": "3",
@@ -135,7 +135,7 @@ export class TourPackagesService {
       "costPerPerson": 1600,
       "adventureType": "Water Sports",
       "description": "Dive into excitement with a thrilling array of water sports adventures in Abu Dhabi, where you'll experience the adrenaline rush of jet skiing, parasailing, and more.",
-      "imageUrl": "https://wallpapercave.com/wp/wp150780.jpg",
+      "imageUrl": "https://abudhabimarine.ae/img/containers/assets/abu-dhabi-marine-tours.jpg/e91808c3f2cea953be4c333020ac6199.jpg",
     },
     {
       "regionId": "1",
@@ -155,7 +155,7 @@ export class TourPackagesService {
       "costPerPerson": 1700,
       "adventureType": "Wonders",
       "description": "Embark on a captivating journey along the Bosphorus Strait in Istanbul, where Europe and Asia meet, and marvel at the city's iconic landmarks, magnificent palaces, and bustling waterfront.",
-      "imageUrl": "https://wallpapercave.com/wp/wp150780.jpg",
+      "imageUrl": "https://excursionmania.com/wp-content/uploads/2021/02/ist-1.jpeg",
     }
   ];
 
