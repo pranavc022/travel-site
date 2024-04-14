@@ -26,6 +26,7 @@ import { AsiaComponent } from './regions/asia/asia.component';
 import { AmericasComponent } from './regions/americas/americas.component';
 import { EuropeComponent } from './regions/europe/europe.component';
 import { MiddleEastComponent } from './regions/middle-east/middle-east.component';
+import { PackageDetailComponent } from './package-detail/package-detail.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { MiddleEastComponent } from './regions/middle-east/middle-east.component
     AsiaComponent,
     AmericasComponent,
     EuropeComponent,
-    MiddleEastComponent
+    MiddleEastComponent,
+    PackageDetailComponent
     
   ],
   imports: [

@@ -20,9 +20,9 @@ export class AsiaComponent implements OnInit {
   }
 
   fetchTourPackages() {
-    this.tourPackages = this.tourPackagesService.getTourPackages('1', this.selectedAdventureType, this.costPerPersonRange)
-      .map(pkg => ({ ...pkg, imageUrl: `https://via.placeholder.com/150?text=${pkg.packageName.replace(/\s+/g, '+')}` }));
+    this.tourPackages = this.tourPackagesService.getTourPackages('1', this.selectedAdventureType, this.costPerPersonRange);
   }
+  
 
   applyFilters() {
     this.fetchTourPackages();

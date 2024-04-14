@@ -45,7 +45,7 @@ export class TourPackagesService {
       "costPerPerson": 2500,
       "adventureType": "Hill Stations",
       "description": "Indulge in the breathtaking beauty of the Swiss Alps with thrilling adventures amidst picturesque landscapes.",
-      "imageUrl": "https://wallpapercave.com/wp/wp150780.jpg",
+      "imageUrl": "https://wallpaperaccess.com/full/938058.jpg",
     },
     {
       "regionId": "2",
@@ -75,7 +75,7 @@ export class TourPackagesService {
       "costPerPerson": 2200,
       "adventureType": "Historical",
       "description": "Immerse yourself in the romance and history of Venice as you explore its charming canals, magnificent palaces, and iconic landmarks.",
-      "imageUrl": "https://wallpapercave.com/wp/wp150780.jpg",
+      "imageUrl": "https://th.bing.com/th/id/R.05f4a203e60c3c93919b8137a598e455?rik=43WHNUWQmxVJSQ&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f07%2fHD-Venice-Italy-Wallpapers.jpeg&ehk=zQhjlKWxHHyfe7fP0uxCVvue0wsIeXjF9%2bku33uy%2btw%3d&risl=&pid=ImgRaw&r=0",
     },
     {
       "regionId":"1",
@@ -105,7 +105,7 @@ export class TourPackagesService {
       "costPerPerson": 2400,
       "adventureType": "Historical",
       "description": "Fall in love with the enchanting city of Paris as you stroll along its iconic boulevards, visit world-famous landmarks, and savor the essence of romance in the City of Light.",
-      "imageUrl": "https://wallpapercave.com/wp/wp150780.jpg",
+      "imageUrl": "https://th.bing.com/th/id/R.a34034dfe1e2dc03b059b0adf7e74eaf?rik=HiGXznTtHXqYnQ&riu=http%3a%2f%2fwww.wallpapers13.com%2fwp-content%2fuploads%2f2016%2f02%2fEiffel-tower-between-buildings-Paris-France-Hd-Wallpaper-2560x1600.jpg&ehk=Ufiwzpz1w0Wcj%2b0sqWPGVuQ1POjhfwrJT6LY0fSYJPo%3d&risl=1&pid=ImgRaw&r=0",
     },
     {
       "regionId": "1",

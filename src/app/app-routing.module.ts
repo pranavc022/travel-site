@@ -11,6 +11,7 @@ import { AmericasComponent } from './regions/americas/americas.component';
 import { EuropeComponent } from './regions/europe/europe.component';
 import { MiddleEastComponent } from './regions/middle-east/middle-east.component';
 import { RegionsComponent } from './regions/regions.component';
+import { PackageDetailComponent } from './package-detail/package-detail.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'destination/americas', component: AmericasComponent },
   { path: 'destination/europe', component: EuropeComponent },
   { path: 'destination/middle-east', component: MiddleEastComponent },
+  { path: 'packages/:id', component: PackageDetailComponent },
   
   // {path: 'destinations/:regionId/packages', component: PackagesComponent},
   // {
