@@ -42,17 +42,22 @@
   </div>
 </div>
 
-
 <div class="tour-packages">
-  <div class="tour-package" *ngFor="let tour of tourPackages">
-    <a [routerLink]="['/packages', tour.regionId]"></a>
-    <img [src]="tour.imageUrl" alt="{{ tour.packageName }}" />
-    <h3>{{ tour.packageName }}</h3>
-    <p>Country: {{ tour.countryName }}</p>
-    <p>Cost per Person: {{ tour.costPerPerson }}</p>
-    <p>Adventure Type: {{ tour.adventureType }}</p>
-    <p>{{ tour.description }}</p>
+
+  <div *ngFor="let tour of tourPackages" class="tour-package">
+
+    <a [routerLink]="['/packages', tour.packageId]">
+      <img [src]="tour.imageUrl" alt="{{ tour.packageName }}" />
+      <div class="package-details">
+        <h3>{{ tour.packageName }}</h3>
+        <p>Country: {{ tour.countryName }}</p>
+        <p>Cost per Person: {{ tour.costPerPerson }}</p>
+        <p>Adventure Type: {{ tour.adventureType }}</p>
+        <p>{{ tour.description }}</p>
+      </div>
+    </a>
   </div>
+ 
   <div *ngIf="tourPackages.length === 0" class="no-results">
     <h2>No matching results</h2>
   </div>
