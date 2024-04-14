@@ -143,14 +143,20 @@ export class TourPackagesService {
     }
   ];
 
-  getTourPackages(regionId: string, costRange?: [number, number]): TourPackage[] {
+  getTourPackages(regionId: string, adventureType?: string, costRange?: [number, number]): TourPackage[] {
     let filteredTours = this.tours.filter(tour => tour.regionId === regionId);
+
+    if (adventureType && adventureType !== 'All') {
+      filteredTours = filteredTours.filter(tour => tour.adventureType === adventureType);
+    }
+
     if (costRange) {
       filteredTours = filteredTours.filter(tour => tour.costPerPerson >= costRange[0] && tour.costPerPerson <= costRange[1]);
     }
+
     return filteredTours;
   }
   
 
-  constructor() { }
+  // constructor() { }
 }
