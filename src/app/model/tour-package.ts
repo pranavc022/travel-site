@@ -1,3 +1,5 @@
+import { SafeUrl } from "@angular/platform-browser";
+
 export interface TourPackage {
    
         regionId: string;
@@ -7,6 +9,6 @@ export interface TourPackage {
         costPerPerson: number;
         adventureType: string;
         description: string;
+        imageUrl: SafeUrl;
         // rating: string;
-      
 }

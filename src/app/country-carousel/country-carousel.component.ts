@@ -8,13 +8,13 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 export class CountryCarouselComponent implements OnInit, OnDestroy{
   images = [
     'https://static.vecteezy.com/system/resources/previews/001/116/378/large_2x/beijing-great-wall-of-china-photo.jpg', 
-    'https://www.hdwallpapers.in/download/taj_mahal_agra_india_4k-1440x2560.jpg', 
-    'https://th.bing.com/th/id/OIP.3nV7uthpIj9rBZojEBArfAHaNK?rs=1&pid=ImgDetMain',
-    'https://r1.ilikewallpaper.net/iphone-wallpapers/download/98355/Venice-HD-Backgrounds-iphone-wallpaper-ilikewallpaper_com.jpg',
-    'https://www.hdwallpapers.in/download/dubai_night_cityscape_4k-1080x1920.jpg',
-    'https://th.bing.com/th/id/R.7c410cbc521962574e9126f4bf0c61f1?rik=dk%2bRMrGRX1jQ8Q&riu=http%3a%2f%2fqatarairways.com%2fcontent%2fdam%2fimages%2frenditions%2fvertical%2fdestinations%2fsaudi-arabia%2friyadh%2fv-riyadh-skyline2.jpg&ehk=70hpgmVxDF5n7Gk9z5sdbgnm%2bfsw%2fWMnIsbDEvSVAiM%3d&risl=&pid=ImgRaw&r=0',
-    'https://i.pinimg.com/originals/1e/37/81/1e3781df3bff2dd3ea0a14dde18479fc.jpg',
-    'https://www.tourist-destinations.com/wp-content/uploads/2014/04/c82c37ac57432f7d338f11bc8076e6f6.jpg'
+    'https://wallpaperaccess.com/full/8231407.jpg', 
+    'https://i.pinimg.com/originals/09/0c/6e/090c6e54764437fc0bc456c3acea2a25.jpg',
+    'https://wallpapercave.com/wp/wp7921787.jpg',
+    'https://images.unsplash.com/photo-1546412414-e1885259563a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnVyaiUyMGFsJTIwYXJhYnxlbnwwfHwwfHw%3D&w=1000&q=80',
+    'https://th.bing.com/th/id/R.cf72afde332d8c0b1b0e9408b41a25bc?rik=4mtSPXoUiWvKLQ&riu=http%3a%2f%2fwww.radionz.co.nz%2fassets%2fnews%2f65507%2feight_col_riyadh_at_night.jpg%3f1460949321&ehk=o0fONNg4CchF%2f1a0K5hK8NI4eq4SHYElZA8Q3sHdCNA%3d&risl=&pid=ImgRaw&r=0',
+    'https://w0.peakpx.com/wallpaper/51/723/HD-wallpaper-statue-of-liberty-clouds-liberty-new-york-sky-statue.jpg',
+    'https://i.pinimg.com/originals/6f/bc/b6/6fbcb6c3b964126a9cb11356df3695e3.jpg'
   ];
   currentImageIndex = 0;
   autoSlideInterval: any;

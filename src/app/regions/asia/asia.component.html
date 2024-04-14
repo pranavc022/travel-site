@@ -39,8 +39,10 @@
   </div>
 </div>
 
+
 <div class="tour-packages">
   <div class="tour-package" *ngFor="let tour of tourPackages">
+    <img [src]="tour.imageUrl" alt="{{ tour.packageName }}" />
     <h3>{{ tour.packageName }}</h3>
     <p>Country: {{ tour.countryName }}</p>
     <p>Cost per Person: {{ tour.costPerPerson }}</p>

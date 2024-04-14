@@ -1,101 +1,167 @@
-.container {
-    display: flex;
-    height: 70vh; 
-  }
-  
-  .carousel-container {
-    width: 35%;
-    position: relative;
-  }
-  
-  .carousel {
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .carousel img {
-    display: none;
-    width: 100%; 
-    height: auto; 
-    object-fit: cover; 
-  }
-  
-  .carousel img.active {
-    display: block;
-  }
-  
-  .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    width: 30px; 
-    height: 30px;
-    background-color: #fcb900; 
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .carousel-btn.left {
-    left: 10px;
-  }
-  
-  .carousel-btn.right {
-    right: 10px;
-  }
-  
-  .locations-container {
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    background-color: #ff6900; 
-  }
-  
-  .locations-header {
-    color: rgb(0, 0, 0);
-    padding: 10px 0;
-    text-align: center;
-    font-size: 28px;
-    background-color: #ff6900; 
-    font-weight: 900;
-  }
-  
-  .regions-container {
-    flex-grow: 1; 
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .region-group {
-    display: flex;
-    width: 100%;
-  }
-  
-  .orange-bg {
-    background-color: #ff6900;
-  }
-  
-  .purple-bg {
-    background-color: #9b51e0;
-    color: rgb(0, 0, 0);
-  }
-  
-  .region {
-    flex: 1; 
-    padding: 10px;
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 14px;
-  }
-  
-  .country-icon {
-    display: block;
-    width: 20px; 
-    height: 20px; 
-    margin: 0 auto 10px; 
-  }
-  
+* {
+  box-sizing: border-box; /* Global box-sizing to border-box */
+}
 
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%; 
+  max-width: 100%; 
+  height: 70vh; 
+  margin: 0; 
+  overflow: hidden;
+}
+
+.locations-header {
+  font-weight: bold; 
+  text-align: center; 
+  font-size: larger; 
+  padding: 20px 0; 
+  font-family: "Playfair Display";
+  color: #333;
+}
+
+.carousel-container, .locations-container {
+  flex: none;
+  height: 100%;
+  margin: 0;
+  padding: 0; 
+}
+
+.carousel-container {
+  flex-basis: 45%;
+  position: relative;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  padding: 0;
+}
+
+.carousel {
+  width: 100%;
+}
+
+.carousel img {
+  max-width: 100%; 
+  max-height: 100%;
+  display: none;
+  object-fit: cover; 
+}
+
+.carousel img.active {
+  display: block; 
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2; 
+}
+
+.carousel-btn {
+  background-color: #ffce47; 
+  border: none; 
+  border-radius: 50%; 
+  width: 30px; 
+  height: 30px;
+  color: rgb(0, 0, 0); 
+  font-size: 1.2rem;
+  align-items: center; 
+  justify-content: center; 
+  display: flex; 
+  cursor: pointer; 
+  line-height: 30px; 
+  background-size: contain;
+  line-height: 30px; 
+  font-size: 1.5rem; 
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+}
+
+.carousel-btn:hover {
+  transform: scale(1.2); 
+  transition: transform 0.3s ease; 
+}
+
+.carousel-btn.left {
+  left: 0;
+}
+
+.carousel-btn.right {
+  right: 0;
+}
+
+.locations-container {
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 55%;
+  align-items: stretch; 
+  text-align: center;
+  /*background: linear-gradient(to right, #ff9a52, #ffce47);*/
+  padding: 0; 
+}
+
+.regions-container {
+  display: flex;
+  justify-content: space-between; 
+  font-family: "Playfair Display";
+  align-items: center; 
+  flex-wrap: wrap; 
+  padding: 10px;
+}
+
+.region {
+  width: calc(50% - 10px); 
+  padding: 10px; 
+}
+
+
+.region a img {
+  width: 40px; 
+  height: auto;
+  transition: transform 0.5s ease, filter 0.3s ease;
+  transform-style: preserve-3d; /* Allows for 3D transformations */
+  cursor: pointer;
+}
+
+.region a:hover img {
+  transform: rotateY(180deg);
+  filter: brightness(0.9); 
+}
+
+.region h3 {
+  font-size: 1rem; 
+  color: #333;
   
+}
+
+.region p {
+  font-size: 0.9em; 
+  color: #333;
+}
+
+.icon {
+  margin: 0 auto; 
+  transition: transform 0.5s; 
+}
+
+.icon:hover {
+  transform: rotate(360deg); 
+}
+
+
+.orange-bg, .purple-bg {
+  width: 100%; 
+  display: flex; 
+  flex-wrap: wrap; 
+}
