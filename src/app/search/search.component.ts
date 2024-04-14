@@ -1,64 +1,75 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms'; // Import necessary modules
+import { FormBuilder, FormGroup, Validators } from '@angular/forms'; 
 import { Router } from '@angular/router';
 import { Region } from '../model/region';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrl: './search.component.css'
+  styleUrls: ['./search.component.css'] 
 })
-
 export class SearchComponent implements OnInit {
   currentDate: string;
-  selectedRegion: string;
+  searchForm: FormGroup;
   regions: Region[] = [
     { id: 'asia', name: 'Asia' },
     { id: 'amer', name: 'Americas' },
     { id: 'middle-east', name: 'Middle East' },
     { id: 'europe', name: 'Europe' }
   ];
-  travelerCount: number = 1;
-  constructor(private router: Router) { }
 
+  constructor(private fb: FormBuilder, private router: Router) {
+    this.searchForm = this.fb.group({
+      region: ['', Validators.required],
+      date: ['', Validators.required],
+      travelers: [1, [Validators.required, Validators.min(1)]]
+    });
+  }
 
   ngOnInit(): void {
     this.currentDate = this.getCurrentDate();
-
+    this.searchForm.get('date')?.setValue(this.currentDate);
   }
-  getCurrentDate() {
+
+  getCurrentDate(): string {
     const today = new Date();
     return today.toISOString().split('T')[0];
   }
 
-  decrementTravelerCount() {
-    if (this.travelerCount > 1) {
-      this.travelerCount--;
+  decrementTravelerCount(): void {
+    if (this.searchForm.get('travelers')?.value > 1) {
+      this.searchForm.get('travelers')?.setValue(this.searchForm.get('travelers')?.value - 1);
     } else {
       alert("Minimum number of travelers should be 1");
     }
   }
 
-  incrementTravelerCount() {
-    this.travelerCount++;
+  incrementTravelerCount(): void {
+    this.searchForm.get('travelers')?.setValue(this.searchForm.get('travelers')?.value + 1);
   }
-  search() {
-    switch (this.selectedRegion) {
-      case 'asia':
-        this.router.navigate(['/destination/asia']);
-        break;
-      case 'amer':
-        this.router.navigate(['/destination/americas']);
-        break;
-      case 'europe':
-        this.router.navigate(['/destination/europe']);
-        break;
-      case 'middle-east':
-        this.router.navigate(['/destination/middle-east']);
-        break;
-      default:
-        break;
+  
+  search(): void {
+    if (this.searchForm.valid) {
+      this.navigateBasedOnRegion(this.searchForm.get('region')?.value);
+    } else {
+      this.showValidationErrors();
+    }
+  }
+
+  navigateBasedOnRegion(region: string): void {
+    // Your navigation logic based on the selected region
+    this.router.navigate([`/destination/${region}`]);
+  }
+
+  showValidationErrors(): void {
+    if (this.searchForm.get('region')?.errors) {
+      alert('Region must be selected.');
+    }
+    if (this.searchForm.get('date')?.errors) {
+      alert('Check-in date must be added.');
+    }
+    if (this.searchForm.get('travelers')?.hasError('min')) {
+      alert('Minimum number of travelers should be 1.');
     }
   }
 }
