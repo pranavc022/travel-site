@@ -34,12 +34,15 @@
   }
   
   .traveler-count{
+    display: inline-block;
+    width: 50px; /* Adjust width as needed */
     text-align: center;
-    padding: 8px 8px; 
+    padding: 8px; 
     border: 1px solid #ccc;
     border-radius: 4px; 
     font-size: 16px; 
-    cursor: pointer; 
+    cursor: pointer;
+    background-color: #fff; /* Add a background color */
   }
   
   .destination {
@@ -103,11 +106,34 @@
   
   .traveler-minus,
   .traveler-plus {
-    margin: 8px;
-    padding: 5px;
-    border: none;
+    display: inline-block;
+    margin: 0 8px; /* Space out the buttons */
+    padding: 8px; /* Add padding */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 50%; /* Circular buttons */
+    background-color: #fff; /* Add a background color */
     cursor: pointer;
-    border-radius: 10px;
+    font-size: 16px; /* Adjust the font size as needed */
+    color: #333; /* Button text color */
+    text-align: center;
+    width: 30px; /* Width of the buttons */
+    height: 30px; /* Height of the buttons */
+    line-height: 30px; /* Center the plus/minus vertically */
+  }
+
+  .traveler-minus:hover,
+  .traveler-plus:hover {
+    background-color: #e0e0e0; /* Light gray background on hover */
+  }
+
+  .traveler-minus i,
+  .traveler-plus i {
+    display: block;
+  }
+  
+  /* Correct any potential misalignments */
+  .traveler-count, .traveler-minus, .traveler-plus {
+    vertical-align: middle;
   }
   
   

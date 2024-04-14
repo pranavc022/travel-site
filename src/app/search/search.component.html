@@ -1,52 +1,47 @@
-   <div class="search-container">
-    <div class="search-box" >
-        <div>
-            <div class= "top-section">
-                <select class="destination" placeholder="Where to?" [(ngModel)]="selectedRegion">
-                    <!-- <option value="">Where to?</option> -->
-                    <label for="regionSelect" [(ngModel)]="selectedRegion">Select Region:</label>
-                    <option *ngFor="let region of regions" [value]="region.id">{{ region.name }}</option>  
-                </select>
-            </div>
-            <div class = "bottom-section" style="padding-top: 10px; text-align: center;">
-                <label class = "labels" style="Montserrat, sans-serif; font-weight: 300;">REGION</label>
-            </div>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<form [formGroup]="searchForm" (ngSubmit)="search()">
+  <div class="search-container">
+    <div class="search-box">
+      <div>
+        <div class="top-section">
+          <select class="destination" formControlName="region">
+            <!-- Placeholder option removed as it is better to use a valid default value -->
+            <option *ngFor="let region of regions" [value]="region.id">{{ region.name }}</option>
+          </select>
         </div>
-        
-        <div  class="date-picker" style="padding-left: 20px; text-align: center;">
-            <div>
-                <input type="date" class="check-in" [min]="currentDate" >
-            </div>
- 
-            <div style="padding-top: 10px;">
-                <label class = "labels"  style="Montserrat, sans-serif;  ; font-weight: 300;" for="">WHEN?</label>
-            </div>
-          
+        <div class="bottom-section" style="padding-top: 10px; text-align: center;">
+          <label class="labels" style="font-family: 'Montserrat', sans-serif; font-weight: 300;">REGION</label>
         </div>
-        <div class="travelers">
-            <div class="travelers_top-container">
-              <div class="number">  
-                <button class="traveler-minus" (click)="decrementTravelerCount()">
-                  <i class="fa-solid fa-minus"></i>
-                </button>
-                <input type="number" class="traveler-count" min="1" [(ngModel)]= "travelerCount" readonly="readonly">
-                <button class="traveler-plus" (click)="incrementTravelerCount()">
-                  <i class="fa-solid fa-plus"></i>                    
-                </button>
-              </div>
-              <div style="padding-top: 10px; text-align: center;">
-                <label class="labels" style="Montserrat, sans-serif; font-weight: 300;" for="">TRAVELLERS</label>
-              </div>
-            </div>
-          </div>
-          
       </div>
-      <button class="find-tours-btn" (click)="search()">
+      <div class="date-picker" style="padding-left: 20px; text-align: center;">
+        <div>
+          <input type="date" class="check-in" formControlName="date" [min]="currentDate">
+        </div>
+        <div style="padding-top: 10px;">
+          <label class="labels" style="font-family: 'Montserrat', sans-serif; font-weight: 300;">WHEN?</label>
+        </div>
+      </div>
+      <div class="travelers">
+        <div class="travelers_top-container">
+          <div class="number">
+            <button type="button" class="traveler-minus" (click)="decrementTravelerCount()">
+              <i class="fas fa-minus"></i>
+            </button>
+            <input type="number" class="traveler-count" formControlName="travelers" readonly>
+            <button type="button" class="traveler-plus" (click)="incrementTravelerCount()">
+              <i class="fas fa-plus"></i> 
+            </button>
+          </div>
+          <div style="padding-top: 10px; text-align: center;">
+            <label class="labels" style="font-family: 'Montserrat', sans-serif; font-weight: 300;">TRAVELLERS</label>
+          </div>
+        </div>
+      </div>
+      <button class="find-tours-btn" type="submit">
         <i class="fa-solid fa-suitcase-rolling fa-2xl" style="color: #FFD43B;"></i>
         <br>
         <span><b>FIND TOURS</b></span>
       </button>
     </div>
-
-  
+  </div>
+</form>

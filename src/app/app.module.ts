@@ -27,6 +27,7 @@ import { AmericasComponent } from './regions/americas/americas.component';
 import { EuropeComponent } from './regions/europe/europe.component';
 import { MiddleEastComponent } from './regions/middle-east/middle-east.component';
 import { PackageDetailComponent } from './package-detail/package-detail.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { PackageDetailComponent } from './package-detail/package-detail.componen
     MatInputModule,
     MatSelectModule,
     MatDatepickerModule,  
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
