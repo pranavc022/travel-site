@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 * {
-  box-sizing: border-box; /* Global box-sizing to border-box */
+  box-sizing: border-box; 
+  font-family: 'Montserrat', sans-serif; 
 }
 
 html, body {
@@ -18,6 +21,7 @@ html, body {
   height: 70vh; 
   margin: 0; 
   overflow: hidden;
+  font-family: 'Montserrat', sans-serif; 
 }
 
 .locations-header {
@@ -25,7 +29,7 @@ html, body {
   text-align: center; 
   font-size: larger; 
   padding: 20px 0; 
-  font-family: "Playfair Display";
+  font-family: 'Montserrat', sans-serif; 
   color: #333;
 }
 
