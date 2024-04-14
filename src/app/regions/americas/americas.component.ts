@@ -1,10 +1,40 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TourPackagesService } from '../../services/tour-packages.service';
+import { TourPackage } from '../../model/tour-package';
 
 @Component({
   selector: 'app-americas',
   templateUrl: './americas.component.html',
   styleUrl: './americas.component.css'
 })
-export class AmericasComponent {
+export class AmericasComponent implements OnInit {
+  tourPackages: TourPackage[] = [];
+  adventureTypes = ['Hill Stations', 'Desert Safari', 'Water Sports', 'Historical', 'Wonders'];
+  selectedAdventureType: string;
+  costPerPersonRange: [number, number] = [1500, 3000];
 
+  constructor(private tourPackagesService: TourPackagesService) {}
+
+  ngOnInit() {
+    this.fetchTourPackages();
+  }
+
+  fetchTourPackages() {
+    this.tourPackages = this.tourPackagesService.getTourPackages('2', this.costPerPersonRange);
+  }
+
+  onAdventureTypeSelect() {
+    this.fetchTourPackages();
+  }
+
+  onCostRangeChange() {
+    this.fetchTourPackages();
+  }
+  clearFilters() {
+    this.selectedAdventureType = '';
+    this.costPerPersonRange = [1500, 3000];
+    this.fetchTourPackages();
+  }
 }
+
+

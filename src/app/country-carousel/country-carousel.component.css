@@ -1,15 +1,23 @@
-body, ul {
+* {
+  box-sizing: border-box; /* Global box-sizing to border-box */
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .container {
   display: flex;
-  width: 100vw; 
+  flex-wrap: nowrap;
+  width: 100%; 
   max-width: 100%; 
   height: 70vh; 
   margin: 0; 
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .locations-header {
@@ -18,19 +26,20 @@ body, ul {
   font-size: larger; 
   padding: 20px 0; 
   font-family: "Playfair Display";
+  color: #333;
 }
 
 .carousel-container, .locations-container {
+  flex: none;
   height: 100%;
   margin: 0;
   padding: 0; 
 }
 
 .carousel-container {
-  flex-grow: 1;
+  flex-basis: 45%;
   position: relative;
   display: flex;
-  flex: 0 0 45%;
   justify-content: center; 
   align-items: center; 
   padding: 0;
@@ -75,6 +84,7 @@ body, ul {
   line-height: 30px; 
   font-size: 1.5rem; 
   font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
 }
 
 .carousel-btn:hover {
@@ -97,7 +107,7 @@ body, ul {
   flex: 0 0 55%;
   align-items: stretch; 
   text-align: center;
-  background-color: #fea362; 
+  /*background: linear-gradient(to right, #ff9a52, #ffce47);*/
   padding: 0; 
 }
 
@@ -107,6 +117,7 @@ body, ul {
   font-family: "Playfair Display";
   align-items: center; 
   flex-wrap: wrap; 
+  padding: 10px;
 }
 
 .region {
@@ -116,23 +127,28 @@ body, ul {
 
 
 .region a img {
-  transition: transform 0.3s ease;
   width: 40px; 
   height: auto;
+  transition: transform 0.5s ease, filter 0.3s ease;
+  transform-style: preserve-3d; /* Allows for 3D transformations */
+  cursor: pointer;
 }
 
 .region a:hover img {
-  transform: scale(1.1);
+  transform: rotateY(180deg);
+  filter: brightness(0.9); 
 }
 
 .region h3 {
   font-size: 1rem; 
+  color: #333;
+  
 }
 
 .region p {
   font-size: 0.9em; 
+  color: #333;
 }
-
 
 .icon {
   margin: 0 auto; 

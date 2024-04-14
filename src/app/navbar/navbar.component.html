@@ -7,14 +7,14 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <div class="menu_bar">
           <li class="nav-item dropdown">
-            <a routerLink="destinations" class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a routerLink="/destinations" routerLinkActive="active"  class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="bi bi-globe" ></i> Destinations <i class="fa fa-caret-down"></i>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Asia</a></li>
-              <li><a class="dropdown-item" href="#">Europe</a></li>
-              <li><a class="dropdown-item" href="#">Mid East</a></li>
-              <li><a class="dropdown-item" href="#">America</a></li>
+              <li><a class="dropdown-item" routerLink="/destination/asia">Asia</a></li>
+              <li><a class="dropdown-item" routerLink="/destination/europe">Europe</a></li>
+              <li><a class="dropdown-item" routerLink="/destination/middle-east">Mid East</a></li>
+              <li><a class="dropdown-item" routerLink="/destination/americas">America</a></li>
             </ul>
           </li>
       </div>
@@ -50,3 +50,4 @@
     </div>
   </div>
 </nav>
+<router-outlet></router-outlet>
