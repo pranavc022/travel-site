@@ -8,31 +8,27 @@ import { TourPackage } from '../../model/tour-package';
 })
 export class AsiaComponent  implements OnInit{
   tourPackages: TourPackage[] = [];
-  adventureTypes = ['Hill Stations', 'Desert Safari', 'Water Sports', 'Historical', 'Wonders'];
+  adventureTypes = ['All','Hill Stations', 'Desert Safari', 'Water Sports', 'Historical', 'Wonders'];
   selectedAdventureType: string;
-  costPerPersonRange: [number, number] = [1500, 3000];
+  costPerPersonRange: [number, number] = [1000, 3000];
 
   constructor(private tourPackagesService: TourPackagesService) {}
 
   ngOnInit() {
     this.fetchTourPackages();
   }
-
   fetchTourPackages() {
-    this.tourPackages = this.tourPackagesService.getTourPackages('1', this.costPerPersonRange);
+    this.tourPackages = this.tourPackagesService.getTourPackages('1', this.selectedAdventureType, this.costPerPersonRange);
   }
-
-  onAdventureTypeSelect() {
+  applyFilters() {
     this.fetchTourPackages();
   }
 
-  onCostRangeChange() {
-    this.fetchTourPackages();
-  }
   clearFilters() {
-    this.selectedAdventureType = '';
-    this.costPerPersonRange = [1500, 3000];
+    this.selectedAdventureType = 'All';
+    this.costPerPersonRange = [1000, 3000];
     this.fetchTourPackages();
   }
+  
 
 }
