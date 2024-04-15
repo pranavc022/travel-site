@@ -28,6 +28,8 @@ import { EuropeComponent } from './regions/europe/europe.component';
 import { MiddleEastComponent } from './regions/middle-east/middle-east.component';
 import { PackageDetailComponent } from './package-detail/package-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ConfirmBookingModalComponent } from './confirm-booking-modal/confirm-booking-modal.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AmericasComponent,
     EuropeComponent,
     MiddleEastComponent,
-    PackageDetailComponent
+    PackageDetailComponent,
+    ConfirmBookingModalComponent
     
   ],
   imports: [
@@ -60,7 +63,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatSelectModule,
     MatDatepickerModule,  
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
