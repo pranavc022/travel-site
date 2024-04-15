@@ -5,7 +5,6 @@ import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { PackagesComponent } from './destination/packages/packages.component';
 import { AsiaComponent } from './regions/asia/asia.component';
 import { AmericasComponent } from './regions/americas/americas.component';
 import { EuropeComponent } from './regions/europe/europe.component';
@@ -17,12 +16,12 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'destinations', component: DestinationComponent},
   { path: 'destinations/:regionId', component: DestinationComponent },
-
   { path: 'destination/asia', component: AsiaComponent },
-  { path: 'destination/amer', component: AmericasComponent },
+  { path: 'destination/americas', component: AmericasComponent },
   { path: 'destination/europe', component: EuropeComponent },
   { path: 'destination/middle-east', component: MiddleEastComponent },
   { path: 'packages/:id', component: PackageDetailComponent },
+  
   
   // {path: 'destinations/:regionId/packages', component: PackagesComponent},
   // {
@@ -35,7 +34,7 @@ const routes: Routes = [
   //     { path: 'americas', component: AmericasComponent } // Child route for America
   //   ]
   // },
-  
+
   {path: 'about-us', component: AboutUsComponent },
   {path: 'contact', component: ContactComponent},
 
