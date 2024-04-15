@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'destinations/:regionId', component: DestinationComponent },
 
   { path: 'destination/asia', component: AsiaComponent },
-  { path: 'destination/americas', component: AmericasComponent },
+  { path: 'destination/amer', component: AmericasComponent },
   { path: 'destination/europe', component: EuropeComponent },
   { path: 'destination/middle-east', component: MiddleEastComponent },
   { path: 'packages/:id', component: PackageDetailComponent },
