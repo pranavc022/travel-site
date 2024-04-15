@@ -21,6 +21,9 @@ export class PackageDetailComponent implements OnInit {
     if (packageId) {
       this.package = this.tourPackagesService.getTourPackages('1').find(p => p.packageId === packageId);
     }
+    else if (packageId) {
+      this.package = this.tourPackagesService.getTourPackages('3').find(p => p.packageId === packageId);
+    }
   }
 
   confirmBooking() {
