@@ -165,11 +165,13 @@ body {
   
   .para {
     
-    font-size: 16px;
+    font-size: 20px;
     font-family: "Raleway";
     padding: 20px;
     margin: 0;
+    color: white;
     text-align: center;
+    
   }
   
   .border {
@@ -195,3 +197,4 @@ body {
   .fa-plane {
     font-size: 16px;
   }
+ 
