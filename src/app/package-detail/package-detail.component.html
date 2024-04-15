@@ -6,6 +6,5 @@
     <p>Country: {{ package.countryName }}</p>
     <p>Cost per Person: {{ package.costPerPerson }}</p>
   </div>
-  <button class="confirm-button" (click)="openConfirmBookingModal()">Confirm Booking</button>
-  <app-confirm-booking-modal (confirmation)="handleConfirmation($event)"></app-confirm-booking-modal>
+  <button class="confirm-button" (click)="confirmBooking()">Confirm Booking</button>
 </div>
