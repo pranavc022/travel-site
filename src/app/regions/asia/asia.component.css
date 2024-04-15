@@ -187,3 +187,8 @@ h1 {
   grid-column: 1 / -1;
   text-align: center;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
