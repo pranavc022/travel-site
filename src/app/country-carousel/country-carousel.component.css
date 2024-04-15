@@ -22,6 +22,7 @@ html, body {
   margin: 0; 
   overflow: hidden;
   font-family: 'Montserrat', sans-serif; 
+  background: linear-gradient(#B3C890, #73A9AD);
 }
 
 .locations-header {
@@ -44,10 +45,17 @@ html, body {
   flex-basis: 45%;
   position: relative;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   padding: 0;
+  border: 10px solid #F5F0BB;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin: 20px;
+  border-radius: 20px;
+  overflow: hidden; 
+  height: 60vh;
 }
+
 
 .carousel {
   width: 100%;
@@ -59,6 +67,7 @@ html, body {
   display: none;
   object-fit: cover; 
 }
+
 
 .carousel img.active {
   display: block; 
@@ -72,12 +81,12 @@ html, body {
 }
 
 .carousel-btn {
-  background-color: #ffce47; 
+  background-color: #F5F0BB; 
   border: none; 
   border-radius: 50%; 
   width: 30px; 
   height: 30px;
-  color: rgb(0, 0, 0); 
+  color: #333; 
   font-size: 1.2rem;
   align-items: center; 
   justify-content: center; 

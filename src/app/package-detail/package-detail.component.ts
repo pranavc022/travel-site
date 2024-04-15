@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TourPackagesService } from '../services/tour-packages.service';
 import { TourPackage } from '../model/tour-package';
+import { ConfirmBookingModalComponent } from '../confirm-booking-modal/confirm-booking-modal.component';
 
 @Component({
   selector: 'app-package-detail',
@@ -10,17 +11,17 @@ import { TourPackage } from '../model/tour-package';
 })
 export class PackageDetailComponent implements OnInit {
   package: TourPackage | undefined;
+  @ViewChild(ConfirmBookingModalComponent) confirmModal: ConfirmBookingModalComponent;
 
   constructor(
     private route: ActivatedRoute,
     private tourPackagesService: TourPackagesService
   ) {}
 
- 
   ngOnInit() {
     const packageId = this.route.snapshot.paramMap.get('id');
     if (packageId) {
-  
+ 
       const regions = ['1', '2', '3', '4'];
       for (const region of regions) {
         const tourPackage = this.tourPackagesService.getTourPackages(region).find(p => p.packageId === packageId);
@@ -31,30 +32,15 @@ export class PackageDetailComponent implements OnInit {
       }
     }
   }
-  
-
-  confirmBooking() {
-    const email = prompt('Please enter your email for confirmation:');
-    const phoneNumber = prompt('Please enter your phone number:');
-
-    if (!email || !this.isValidEmail(email)) {
-      alert('Please provide a valid email address.');
-      return;
+ 
+  openConfirmBookingModal() {
+    if (this.confirmModal) {
+      this.confirmModal.openModal();
     }
-
-    if (!phoneNumber || !this.isValidPhoneNumber(phoneNumber)) {
-      alert('Phone number must be 10 digits.');
-      return;
-    }
-
-    alert('Booking confirmed. Our team will get in touch with you.');
   }
 
-  isValidEmail(email: string): boolean {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
-
-  isValidPhoneNumber(phoneNumber: string): boolean {
-    return /^\d{10}$/.test(phoneNumber);
+  handleConfirmation({ email, phone }: { email: string; phone: string }) {
+    // Handle the confirmation logic here, such as making an API call to finalize the booking
+    console.log('Booking confirmed for:', email, phone);
   }
 }
