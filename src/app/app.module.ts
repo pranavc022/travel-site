@@ -30,6 +30,7 @@ import { PackageDetailComponent } from './package-detail/package-detail.componen
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmBookingModalComponent } from './confirm-booking-modal/confirm-booking-modal.component';
+import { ParallaxEffectComponent } from './parallax-effect/parallax-effect.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { ConfirmBookingModalComponent } from './confirm-booking-modal/confirm-bo
     EuropeComponent,
     MiddleEastComponent,
     PackageDetailComponent,
-    ConfirmBookingModalComponent
+    ConfirmBookingModalComponent,
+    ParallaxEffectComponent
     
   ],
   imports: [
