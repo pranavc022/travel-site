@@ -9,7 +9,6 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { PackagesComponent } from './destination/packages/packages.component';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
@@ -28,9 +27,6 @@ import { EuropeComponent } from './regions/europe/europe.component';
 import { MiddleEastComponent } from './regions/middle-east/middle-east.component';
 import { PackageDetailComponent } from './package-detail/package-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ConfirmBookingModalComponent } from './confirm-booking-modal/confirm-booking-modal.component';
-import { ParallaxEffectComponent } from './parallax-effect/parallax-effect.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +37,6 @@ import { ParallaxEffectComponent } from './parallax-effect/parallax-effect.compo
     HomeComponent,
     ContactComponent,
     NotFoundComponent,
-    PackagesComponent,
     FooterComponent,
     SearchComponent,
     CountryCarouselComponent,
@@ -52,9 +47,7 @@ import { ParallaxEffectComponent } from './parallax-effect/parallax-effect.compo
     AmericasComponent,
     EuropeComponent,
     MiddleEastComponent,
-    PackageDetailComponent,
-    ConfirmBookingModalComponent,
-    ParallaxEffectComponent
+    PackageDetailComponent
     
   ],
   imports: [
@@ -65,8 +58,7 @@ import { ParallaxEffectComponent } from './parallax-effect/parallax-effect.compo
     MatSelectModule,
     MatDatepickerModule,  
     FormsModule,
-    ReactiveFormsModule,
-    NgbModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

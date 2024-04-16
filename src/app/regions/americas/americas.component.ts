@@ -12,7 +12,7 @@ export class AmericasComponent implements OnInit {
   adventureTypes = ['All','Hill Stations', 'Desert Safari', 'Water Sports', 'Historical', 'Wonders'];
   selectedAdventureType: string;
   costPerPersonRange: [number, number] = [1000, 3000];
-
+  packageId:string;
   constructor(private tourPackagesService: TourPackagesService) {}
 
   ngOnInit() {
