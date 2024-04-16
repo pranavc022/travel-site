@@ -1,139 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #B3C890; 
+}
+
 .search-container {
-    background-color: #B3C890;
-    display: flex;
-    justify-content: center;
-    padding: 70px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: 'Montserrat', sans-serif; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0;
+  background-color: #B3C890;
+}
 
-  }
-  
+.search-box {
+  background-color: #73A9AD;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 80%; /* Adjust to your preference */
+  max-width: 960px; /* Adjust to your preference */
+}
+
+.search-section {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px; /* Space between sections */
+}
+
+.search-label {
+  color: #F5F0BB;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.input-field {
+  background: #FFFFFF;
+  border: 2px solid #DBDFAA;
+  border-radius: 3px;
+  padding: 8px 12px;
+  color: #333;
+  font-size: 16px;
+}
+
+.input-field.short {
+  width: 60px; /* Width for short input fields like travelers */
+}
+
+.input-field.long {
+  flex-grow: 1; /* Longer input fields like date picker */
+}
+
+.find-tours-btn {
+  padding: 10px 20px;
+  background-color: #DBDFAA; /* Adjusted to your color palette */
+  color: #333;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.find-tours-btn:hover {
+  background-color: #F5F0BB;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .search-box {
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 20px 40px;
-    border-radius: 8px;
-    max-width: 90%;
-  }
-
-  .input-field {
-    flex-grow: 1; 
-    margin-right: 20px;
-    padding: 10px 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    color: #333;
-  }
-
-  .input-field:focus {
-    outline: 2px solid #cca69a; 
-  }
-  
-  .traveler-count{
-    display: inline-block;
-    width: 50px; /* Adjust width as needed */
-    text-align: center;
-    padding: 8px; 
-    border: 1px solid #ccc;
-    border-radius: 4px; 
-    font-size: 16px; 
-    cursor: pointer;
-    background-color: #fff; /* Add a background color */
-  }
-  
-  .destination {
-    text-align: center;
-    padding: 8px 22px; 
-    border: 1px solid #ccc;
-    border-radius: 4px; 
-    font-size: 16px; 
-    cursor: pointer; 
-    
-  }
-  
-  .check-in{
-    padding: 10px 10px; 
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  .find-tours-btn {
-    margin-left: 8px;
-    margin-top: 17px;
-    width:120px;
-    height: 100px;
-    padding-top: 15px;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: #cca69a;
-    background-color: #e08e00;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s;
   }
   
-  .find-tours-btn:hover {
-    background-color: #e0a800; 
-    transform: scale(1.05); 
+  .search-section {
+    margin-right: 0;
+    margin-bottom: 10px; /* Space between stacked sections */
   }
-
-  .destination:focus,
-  .traveler-count:focus {
-    outline: none;
-  }
-  
-  .traveler-count {
-    padding: 10px 7px;
-  }
-
-  .region,
-  .date-picker {
-    margin-right: 20px; 
-  }
-  
-  .region select,
-  .traveler-count {
-    width: 70px; 
-  }
-  
-  .traveler-minus,
-  .traveler-plus {
-    display: inline-block;
-    margin: 0 8px; /* Space out the buttons */
-    padding: 8px; /* Add padding */
-    border: 1px solid #ccc; /* Add border */
-    border-radius: 50%; /* Circular buttons */
-    background-color: #fff; /* Add a background color */
-    cursor: pointer;
-    font-size: 16px; /* Adjust the font size as needed */
-    color: #333; /* Button text color */
-    text-align: center;
-    width: 30px; /* Width of the buttons */
-    height: 30px; /* Height of the buttons */
-    line-height: 30px; /* Center the plus/minus vertically */
-  }
-
-  .traveler-minus:hover,
-  .traveler-plus:hover {
-    background-color: #e0e0e0; /* Light gray background on hover */
-  }
-
-  .traveler-minus i,
-  .traveler-plus i {
-    display: block;
-  }
-  
-  /* Correct any potential misalignments */
-  .traveler-count, .traveler-minus, .traveler-plus {
-    vertical-align: middle;
-  }
-  
-  
+}

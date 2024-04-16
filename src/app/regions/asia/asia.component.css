@@ -26,7 +26,7 @@ h1 {
 }
 
 .header-gradient {
-  background: linear-gradient(#DBDFAA, #B3C890);
+  background: linear-gradient(#B3C890, #73A9AD);
   /*background: linear-gradient(to right, rgb(204, 166, 154), #fce373);*/
   padding: 10px 0 10px 0; 
   text-align: center; 
